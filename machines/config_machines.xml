@@ -1284,7 +1284,8 @@ This allows using a different mpirun command to launch unit tests
       <arguments>
         <arg name="label"> --label</arg>
         <arg name="buffer"> --line-buffer</arg>
-        <arg name="num_tasks" > -n {{ total_tasks }}</arg>
+	<arg name="num_tasks" > -n {{ total_tasks }}</arg>
+	<arg name="host_n"> -host $ENV{HOSTNAME} </arg>
       </arguments>
     </mpirun>
     <module_system type="module" allow_error="true">
